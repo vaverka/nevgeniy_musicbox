@@ -94,6 +94,3 @@ box = MusicBox.new 10
   box.search song_number
   box.load_song
   box.play_music
-  
-
-
