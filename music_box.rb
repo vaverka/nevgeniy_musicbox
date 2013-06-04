@@ -55,11 +55,11 @@ class MusicBox
 	end
 
 	def search song_number
-		@current_song = [song_number.to_i - 1]
+		@current_song = @song[song_number.to_i - 1]
 	end
 
 	def load_song
-		p 'Вы выбрали песню ' + (@song[1]).to_s + ' '
+		p 'Вы выбрали песню ' + (@song[@current_song.to_i]).to_s + ' '
 		p 'Загрузка...'
 	end
 
