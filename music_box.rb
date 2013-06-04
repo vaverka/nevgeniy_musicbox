@@ -33,21 +33,18 @@ class MusicBox
 		if income_money.to_i >= @song_cost.to_i
 			p 'На вашем счете ' + income_money.to_s + ' рублей. Вы можете заказать ' + (income_money.to_i / @song_cost.to_i).to_s + ' Песен! '
 		end
-
 		while income_money.to_i < @song_cost.to_i
 			p 'Внесенных вами средств недостаточно! Для заказа одной песни Вам нехватает ' + (@song_cost.to_i - income_money.to_i).to_s + ' рублей'
 			re_incom_money = gets.chomp
 			income_money = income_money.to_i + re_incom_money.to_i
 			if income_money.to_i >= 10
 				p 'На вашем счете ' + income_money.to_s + ' рублей. Вы можете заказать ' + (income_money.to_i / @song_cost.to_i).to_s + ' Песен! '
-			end
-			
+			end		
 		end
 
 		if income_money.to_i > 100
 			p 'Максимальный платеж 100 рублей'
 		end
-
 	end
 
 	def list_song
